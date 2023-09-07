@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RealEstateDapperAPI.Dtos.CategoryDtos;
 using RealEstateDapperAPI.Repositories.CategoryRepository;
 
 namespace RealEstateDapperAPI.Controllers
@@ -19,6 +20,12 @@ namespace RealEstateDapperAPI.Controllers
         {
             var values = await _categoryRepository.GetAllCategoryAsync();
             return Ok(values);
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        {
+            _categoryRepository.CreateCategory(createCategoryDto);
+            return Ok("Kategori Başarılı Bir Şekilde Eklendi");
         }
     }
 }
