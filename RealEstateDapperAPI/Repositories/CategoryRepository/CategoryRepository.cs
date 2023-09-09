@@ -59,6 +59,16 @@ namespace RealEstateDapperAPI.Repositories.CategoryRepository
             }
         }
 
-
+        public async Task<GetByIDCategoryDto> GetCategory(int id)
+        {
+            string query = "Select * From Categories Where CategoryID=@categoryID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@categoryID", id);
+            using (var connection = _context.CreateConnection())
+            {
+                var values = await connection.QueryFirstOrDefaultAsync<GetByIDCategoryDto>(query, parameters);
+                return values;
+            }
+        }
     }
 }
