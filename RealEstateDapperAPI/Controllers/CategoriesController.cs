@@ -27,7 +27,7 @@ namespace RealEstateDapperAPI.Controllers
             _categoryRepository.CreateCategory(createCategoryDto);
             return Ok("Kategori Başarılı Bir Şekilde Eklendi");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             _categoryRepository.DeleteCategory(id);
