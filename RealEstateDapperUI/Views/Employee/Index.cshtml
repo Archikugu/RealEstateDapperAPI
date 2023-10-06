@@ -33,13 +33,13 @@
                                     <td>
                                         @(item.Status ? "Aktif" : "Pasif")
                                     </td>
-                                    <td><a href="/Category/DeleteEmployee/@item.EmployeeID" class="btn btn-outline-danger">Sil</a></td>
-                                    <td><a href="/Category/UpdateEmployee/@item.EmployeeID" class="btn btn-outline-warning">Güncelle</a></td>
+                                    <td><a href="/Employee/DeleteEmployee/@item.EmployeeID" class="btn btn-outline-danger">Sil</a></td>
+                                    <td><a href="/Employee/UpdateEmployee/@item.EmployeeID" class="btn btn-outline-warning">Güncelle</a></td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                    <a href="/Category/CreateEmployee/" class="btn btn-outline-info">Yeni Personel Girişi</a>
+                    <a href="/Employee/CreateEmployee/" class="btn btn-outline-info">Yeni Personel Girişi</a>
                 </div>
             </div>
         </div>
