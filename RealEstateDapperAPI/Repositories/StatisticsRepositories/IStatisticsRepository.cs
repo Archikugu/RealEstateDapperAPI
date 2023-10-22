@@ -7,8 +7,8 @@
         int PassiveCategoryCount();
         int ProductCount();
         int ApartmentCount();
-        string EmployeeNameByMaxPeoductCount();
-        string CategoryNameByMaxPeoductCount();
+        string EmployeeNameByMaxProductCount();
+        string CategoryNameByMaxProductCount();
         decimal AverageProductPriceByRent();
         decimal AverageProductPriceBySale();
         string CityNameByMaxProductCount();
