@@ -11,5 +11,6 @@
         public string categoryName { get; set; }
         public string coverimage { get; set; }
         public string type { get; set; }
+        public bool dealOfTheDay { get; set; }
     }
 }
