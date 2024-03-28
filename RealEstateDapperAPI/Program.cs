@@ -4,6 +4,7 @@ using RealEstateDapperAPI.Repositories.BottomGridRepositories;
 using RealEstateDapperAPI.Repositories.CategoryRepository;
 using RealEstateDapperAPI.Repositories.ContactRepositories;
 using RealEstateDapperAPI.Repositories.EmployeeRepositories;
+using RealEstateDapperAPI.Repositories.EstateAgentRepositories.ChartRepositories;
 using RealEstateDapperAPI.Repositories.PopularLocationRepositories;
 using RealEstateDapperAPI.Repositories.ProductRepository;
 using RealEstateDapperAPI.Repositories.ServiceRepository;
@@ -11,6 +12,7 @@ using RealEstateDapperAPI.Repositories.StatisticsRepositories;
 using RealEstateDapperAPI.Repositories.TestimonialRepositories;
 using RealEstateDapperAPI.Repositories.ToDoListRepositories;
 using RealEstateDapperAPI.Repositories.WhoWeAreRepository;
+using RealEstateDapperUI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,8 @@ builder.Services.AddTransient<IStatisticsRepository, StatisticsRepository>();
 builder.Services.AddTransient<IContactRepository, ContactRepository>();
 builder.Services.AddTransient<IToDoListRepository, ToDoListRepository>();
 builder.Services.AddTransient<RealEstateDapperAPI.Repositories.EstateAgentRepositories.DashboardRepositories.StatisticsRepositories.IStatisticsRepository, RealEstateDapperAPI.Repositories.EstateAgentRepositories.DashboardRepositories.StatisticsRepositories.StatisticsRepository>();
+builder.Services.AddTransient<IChartRepository, ChartRepository>();
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", builder =>
