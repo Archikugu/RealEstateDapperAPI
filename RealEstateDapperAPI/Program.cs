@@ -27,7 +27,7 @@ builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddTransient<IStatisticsRepository, StatisticsRepository>();
 builder.Services.AddTransient<IContactRepository, ContactRepository>();
 builder.Services.AddTransient<IToDoListRepository, ToDoListRepository>();
-
+builder.Services.AddTransient<RealEstateDapperAPI.Repositories.EstateAgentRepositories.DashboardRepositories.StatisticsRepositories.IStatisticsRepository, RealEstateDapperAPI.Repositories.EstateAgentRepositories.DashboardRepositories.StatisticsRepositories.StatisticsRepository>();
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("CorsPolicy", builder =>
